@@ -23,7 +23,6 @@ export const Description = styled(motion.div)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* padding-right: 5rem; */
   z-index: 2;
   h2 {
     font-weight: lighter;
@@ -42,9 +41,7 @@ export const Image = styled.div`
   z-index: 2;
   img {
     width: 80%;
-    /* height: 80vh; */
     object-fit: cover;
-    /* border-radius: 20px 100px 20px; */
     border-radius: 15px;
     border: 2px solid #23d997;
   }

@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { motion } from "framer-motion";
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const About = styled(motion.div)`
   min-height: 90vh;
@@ -44,7 +44,8 @@ export const Image = styled.div`
     width: 80%;
     /* height: 80vh; */
     object-fit: cover;
-    border-radius: 20px 100px 20px;
+    /* border-radius: 20px 100px 20px; */
+    border-radius: 15px;
     border: 2px solid #23d997;
   }
 `;

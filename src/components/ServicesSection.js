@@ -129,7 +129,7 @@ const Card = styled.div`
   align-items: center;
   margin: 2rem;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
-  border-radius: 1rem;
+  border-radius: 5px;
   .icon {
     display: flex;
     align-items: center;

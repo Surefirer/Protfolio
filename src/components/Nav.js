@@ -1,41 +1,41 @@
-import React from "react";
-import styled from "styled-components";
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import { useLocation } from "react-router-dom";
+import React from 'react';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { useLocation } from 'react-router-dom';
 
 const Nav = () => {
   const { pathname } = useLocation();
   return (
     <StyledNav>
       <h1>
-        <Link id="logo" to="/">
+        <Link id='logo' to='/'>
           Welcome
         </Link>
       </h1>
       <ul>
         <li>
-          <Link to="/">About Me</Link>
+          <Link to='/'>About Me</Link>
           <Line
             transition={{ duration: 0.75 }}
-            initial={{ width: "0%" }}
-            animate={{ width: pathname === "/" ? "65%" : "0%" }}
+            initial={{ width: '0%' }}
+            animate={{ width: pathname === '/' ? '65%' : '0%' }}
           />
         </li>
         <li>
-          <Link to="/work">My Work</Link>
+          <Link to='/work'>My Work</Link>
           <Line
             transition={{ duration: 0.75 }}
-            initial={{ width: "0%" }}
-            animate={{ width: pathname === "/work" ? "65%" : "0%" }}
+            initial={{ width: '0%' }}
+            animate={{ width: pathname === '/work' ? '65%' : '0%' }}
           />
         </li>
         <li>
-          <Link to="/contact">Contact Me</Link>
+          <Link to='/contact'>Contact Me</Link>
           <Line
             transition={{ duration: 0.75 }}
-            initial={{ width: "0%" }}
-            animate={{ width: pathname === "/contact" ? "65%" : "0%" }}
+            initial={{ width: '0%' }}
+            animate={{ width: pathname === '/contact' ? '65%' : '0%' }}
           />
         </li>
       </ul>
@@ -64,7 +64,7 @@ const StyledNav = styled.nav`
   }
   #logo {
     font-size: 1.5rem;
-    font-family: "Lobster", cursive;
+    font-family: 'Lobster', cursive;
     font-weight: lighter;
   }
   li {

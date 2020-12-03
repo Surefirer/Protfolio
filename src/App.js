@@ -1,34 +1,38 @@
-import AboutMe from "./pages/AboutMe";
+import { useState } from 'react';
+import AboutMe from './pages/AboutMe';
+import { ProjectState } from './projectState';
 //Global Style
-import GlobalStyle from "./components/GlobalStyle";
+import GlobalStyle from './components/GlobalStyle';
 //Import Pages
-import MyWork from "./pages/MyWork";
-import ContactMe from "./pages/ContactMe";
-import Nav from "./components/Nav";
-import MovieDetail from "./pages/MovieDetail";
+import MyWork from './pages/MyWork';
+import ContactMe from './pages/ContactMe';
+import Nav from './components/Nav';
+import WorkDetail from './pages/WorkDetail';
 //Router
-import { Switch, Route, useLocation } from "react-router-dom";
+import { Switch, Route, useLocation } from 'react-router-dom';
 //Animation
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence } from 'framer-motion';
 
 function App() {
   const location = useLocation();
+  const [projects] = useState(ProjectState);
+
   return (
-    <div className="App">
+    <div className='App'>
       <GlobalStyle />
       <Nav />
       <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.pathname}>
-          <Route path="/" exact>
+          <Route path='/' exact>
             <AboutMe />
           </Route>
-          <Route path="/work" exact>
-            <MyWork />
+          <Route path='/work' exact>
+            <MyWork projects={projects} />
           </Route>
-          <Route path="/work/:id">
-            <MovieDetail />
+          <Route path='/work/:id'>
+            <WorkDetail projects={projects} />
           </Route>
-          <Route path="/contact">
+          <Route path='/contact'>
             <ContactMe />
           </Route>
         </Switch>

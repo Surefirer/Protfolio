@@ -1,13 +1,13 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import { ProjectState } from "../projectState";
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import { ProjectState } from '../projectState';
 //Images
 //import athlete from "../img/athlete-small.png";
 // import gamingWebsite from "../img/a-gaming-website.jpg";
 // import theracer from "../img/theracer-small.png";
 // import goodtimes from "../img/goodtimes-small.png";
 //Animations
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 import {
   pageAnimation,
   fade,
@@ -15,9 +15,9 @@ import {
   lineAnim,
   slider,
   sliderContainer,
-} from "../animation";
-import { useScroll } from "../components/useScroll";
-import ScrollTop from "../components/ScrollTop";
+} from '../animation';
+import { useScroll } from '../components/useScroll';
+import ScrollTop from '../components/ScrollTop';
 
 const MyWork = () => {
   const [projects, setProjects] = useState(ProjectState);
@@ -28,11 +28,11 @@ const MyWork = () => {
 
   return (
     <Work
-      exit="exit"
+      exit='exit'
       variants={pageAnimation}
-      initial="hidden"
-      animate="show"
-      style={{ background: "#fff" }}
+      initial='hidden'
+      animate='show'
+      style={{ background: '#fff' }}
     >
       <ScrollTop />
       <motion.div variants={sliderContainer}>
@@ -77,7 +77,7 @@ const Projects = styled(motion.div)`
   }
   img {
     width: 100%;
-    height: 70vh;
+    /* height: 70vh; */
     object-fit: cover;
   }
   /* a {
@@ -161,37 +161,37 @@ const Project = ({ title, mainImg, liveDemoUrl, gitHubUrl, postDate }) => {
       ref={element}
       variants={fade}
       animate={control}
-      initial="hidden"
+      initial='hidden'
     >
       <motion.h2 variants={fade}>{title}</motion.h2>
       <LiveDemo
         variants={fade}
-        rel="noopener noreferrer"
-        target="_blank"
+        rel='noopener noreferrer'
+        target='_blank'
         href={liveDemoUrl}
       >
         Live Demo
       </LiveDemo>
       <LiveDemo
         variants={fade}
-        rel="noopener noreferrer"
-        target="_blank"
+        rel='noopener noreferrer'
+        target='_blank'
         href={gitHubUrl}
       >
         Github
       </LiveDemo>
       <PostDate>
-        {postDate ? <p>Posted on: {timeFormatHandler(postDate)}</p> : ""}
+        {postDate ? <p>Posted on: {timeFormatHandler(postDate)}</p> : ''}
       </PostDate>
-      <motion.div variants={lineAnim} className="line"></motion.div>
+      <motion.div variants={lineAnim} className='line'></motion.div>
       <motion.a
         variants={fade}
-        rel="noopener noreferrer"
-        target="_blank"
+        rel='noopener noreferrer'
+        target='_blank'
         href={liveDemoUrl}
       >
         <Hide>
-          <motion.img variants={photoAnim} src={mainImg} alt="athlete" />
+          <motion.img variants={photoAnim} src={mainImg} alt='athlete' />
         </Hide>
       </motion.a>
     </ProjectStyle>

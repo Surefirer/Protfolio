@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
     * {
@@ -23,7 +23,7 @@ const GlobalStyle = createGlobalStyle`
         font-weight: bold;
         font-size: 1.1rem;
         cursor: pointer;
-        border: 3px solid #23d997;
+        border: 1px solid #23d997;
         background: transparent;
         color: white;
         transition: all 0.5s ease;

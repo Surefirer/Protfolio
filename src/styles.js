@@ -39,10 +39,12 @@ export const Image = styled.div`
   flex: 1;
   overflow: hidden;
   z-index: 2;
+  display: flex;
+  justify-content: center;
   img {
-    width: 80%;
+    width: 70%;
     object-fit: cover;
-    border-radius: 15px;
+    border-radius: 50%;
     border: 2px solid #23d997;
   }
 `;

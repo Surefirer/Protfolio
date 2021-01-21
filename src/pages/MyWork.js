@@ -24,8 +24,6 @@ const MyWork = () => {
 
   const sortedProjects = projects.sort((a, b) => b.postDate - a.postDate);
 
-  console.log(sortedProjects);
-
   return (
     <Work
       exit='exit'
@@ -49,6 +47,7 @@ const MyWork = () => {
             liveDemoUrl={project.liveDemoUrl}
             gitHubUrl={project.gitHubUrl}
             postDate={project.postDate}
+            key={project.title}
           />
         ))}
       </Projects>
@@ -77,18 +76,8 @@ const Projects = styled(motion.div)`
   }
   img {
     width: 100%;
-    /* height: 70vh; */
     object-fit: cover;
   }
-  /* a {
-    font-size: 0.8rem;
-    display: inline-block;
-    border: 1px solid black;
-    margin-bottom: 15px;
-    text-decoration: none;
-    padding: 4px 12px;
-    border-radius: 15px;
-  } */
 `;
 
 const LiveDemo = styled(motion.a)`

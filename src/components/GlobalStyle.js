@@ -14,7 +14,8 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        background: #1b1b1b;
+        /* background: #1b1b1b; */
+        background: #F3F3F3;
         font-family: 'Inter', sans-serif;
         overflow-x: hidden;
     }
@@ -25,7 +26,7 @@ const GlobalStyle = createGlobalStyle`
         cursor: pointer;
         border: 1px solid #23d997;
         background: transparent;
-        color: white;
+        color: black;
         transition: all 0.5s ease;
         padding: 1rem 3rem;
         border-radius: 30px;
@@ -43,15 +44,17 @@ const GlobalStyle = createGlobalStyle`
     h2 {
             font-weight: lighter;
             font-size: 3rem;
+            color: black;
         }
 
     h3 {
-            color: white;
+            color: black;
         }
 
     h4 {
         font-weight: bold;
         font-size: 1.7rem;
+        color: black;
     }
 
     span {
@@ -65,7 +68,8 @@ const GlobalStyle = createGlobalStyle`
 
      p {
             padding: 3rem 0rem;
-            color: #ccc;
+            /* color: #ccc; */
+            color: black;
             font-size: 1rem;
             line-height: 150%;
         }

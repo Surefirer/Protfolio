@@ -140,12 +140,10 @@ const ContactContainer = styled(motion.div)`
 const Timber = styled(motion.img)`
   width: 400px;
   height: 400px;
-  // border-radius: 150px 20px 150px;
   border-radius: 15px;
   @media (max-width: 1100px) {
     width: 150px;
     height: 150px;
-    // border-radius: 20px 70px 20px;
   }
 `;
 

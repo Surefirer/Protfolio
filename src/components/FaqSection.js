@@ -1,22 +1,22 @@
-import React from "react";
-import styled from "styled-components";
-import { About } from "../styles";
-import Toggle from "./Toggle";
-import { AnimateSharedLayout } from "framer-motion";
-import { useScroll } from "./useScroll";
-import { fade } from "../animation";
+import React from 'react';
+import styled from 'styled-components';
+import { About } from '../styles';
+import Toggle from './Toggle';
+import { AnimateSharedLayout } from 'framer-motion';
+import { useScroll } from './useScroll';
+import { fade } from '../animation';
 
 const FaqSection = () => {
   const [element, controls] = useScroll();
   return (
-    <Faq variants={fade} ref={element} animate={controls} initial="hidden">
+    <Faq variants={fade} ref={element} animate={controls} initial='hidden'>
       <h2>
         Any Questions <span>FAQ</span>
       </h2>
       <AnimateSharedLayout>
-        <Toggle title="Who are you?">
-          <div className="question">
-            <div className="answer">
+        <Toggle title='Who are you?'>
+          <div className='question'>
+            <div className='answer'>
               <p>
                 Hi! I am Weizhen Liang. A Vancouver-based web developer who
                 loves building websites.
@@ -34,8 +34,8 @@ const FaqSection = () => {
             </div>
           </div>
         </Toggle>
-        <Toggle title="What is your hobby?">
-          <div className="answer">
+        <Toggle title='What is your hobby?'>
+          <div className='answer'>
             <p>I love remote control(R/C) car/helicopter/boat!</p>
             <p>
               I also love flashlight and kinfe! I have a small collection of all
@@ -44,8 +44,8 @@ const FaqSection = () => {
             </p>
           </div>
         </Toggle>
-        <Toggle title="I love your work, can I ask you to make a website for me?">
-          <div className="answer">
+        <Toggle title='I love your work, can I ask you to make a website for me?'>
+          <div className='answer'>
             <p>
               Of course. If you are small business owner and want to have a
               website or your protfolio, please contact me with the detail. I am
@@ -68,8 +68,9 @@ const Faq = styled(About)`
     font-weight: lighter;
   }
   .faq-line {
-    background: #cccccc;
-    height: 0.2rem;
+    /* background: #cccccc; */
+    background: grey;
+    height: 0.1rem;
     margin: 2rem 0rem;
     width: 100%;
   }
